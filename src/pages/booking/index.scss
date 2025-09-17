@@ -1,0 +1,233 @@
+.p-booking {
+  padding: 4px 8px;
+
+  &_header {
+    background-color: var(--white);
+    align-items: center;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    box-shadow: unset;
+
+    span {
+      flex: none;
+      font-weight: 700;
+
+      &:last-child {
+        font-size: 18px;
+        color: var(--blue);
+        text-transform: uppercase;
+      }
+
+      .zaui-icon {
+        font-weight: 700;
+        font-size: 28px !important;
+      }
+    }
+    .zaui-header-back {
+      position: absolute;
+      left: 2px;
+      padding: 4px;
+      height: 30px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .zaui-btn,
+      .zaui-btn-container,
+      .zaui-btn-icon {
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+  }
+
+  &_headers {
+    background-color: var(--white);
+    align-items: center;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    box-shadow: unset;
+
+    &::after {
+      display: none;
+    }
+
+    span {
+      flex: none;
+      font-weight: 700;
+
+      &:last-child {
+        font-size: 18px;
+        color: var(--blue);
+        text-transform: uppercase;
+      }
+
+      .zaui-icon {
+        font-weight: 400;
+        font-size: 30px !important;
+      }
+    }
+    .zaui-header-back {
+      position: absolute;
+      left: 2px;
+      padding: 4px;
+      height: 30px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .zaui-btn,
+      .zaui-btn-container,
+      .zaui-btn-icon {
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+  }
+  &_headers1 {
+    background-color: var(--white);
+    align-items: center;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    box-shadow: unset;
+
+    &::after {
+      display: none;
+    }
+
+    span {
+      flex: none;
+      font-weight: 700;
+
+      &:last-child {
+        font-size: 14px;
+        color: var(--blue);
+        text-transform: uppercase;
+      }
+
+      .zaui-icon {
+        font-weight: 400;
+        font-size: 30px !important;
+      }
+    }
+    .zaui-header-back {
+      position: absolute;
+      left: 2px;
+      padding: 4px;
+      height: 30px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .zaui-btn,
+      .zaui-btn-container,
+      .zaui-btn-icon {
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+  }
+  &_form {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 1px 5px 0px #83838380;
+    margin: 12px 4px 0;
+
+    &_item {
+      &_heading {
+        background-color: rgba(174, 202, 210, 0.741);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+
+        p {
+          color: var(--red);
+        }
+
+        span {
+          color: var(--blue);
+          font-weight: 700;
+        }
+      }
+
+      &_content {
+        background-color: #fff;
+        padding: 12px 16px;
+        i,
+        span {
+          color: var(--blue);
+        }
+
+        button {
+          color: #969393;
+        }
+      }
+    }
+    .zaui-input-affix-wrapper {
+      border: unset !important;
+      margin: 0;
+
+      input {
+        margin: 0;
+        height: unset;
+      }
+    }
+    .zaui-date-picker .zaui-input-suffix {
+      display: none !important;
+    }
+  }
+
+  .zaui-modal .zaui-modal-content-main {
+    padding: 12px;
+    .zaui-modal-content-title {
+      font-weight: 600;
+    }
+    .zaui-modal-content-description {
+      margin: 8px 0 16px;
+      text-align: center;
+    }
+    .zaui-box {
+      .zaui-btn {
+        height: 40px;
+        &:active {
+          background-color: #099d87;
+        }
+      }
+    }
+  }
+}
+
+.p-follow_booking {
+  &_item {
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+    background-color: var(--white);
+
+    &_btn {
+      button {
+        height: fit-content;
+        width: fit-content;
+        border: 1px solid #dbdbdb;
+        box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 24px;
+        border-radius: 4px;
+        color: var(--black);
+      }
+
+      .zaui-btn-primary:active {
+        background-color: #dbdbdb;
+      }
+    }
+  }
+}

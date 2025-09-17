@@ -1,0 +1,403 @@
+.p-register {
+  &_birthday,
+  &_address,
+  &_gender,
+  &_origin,
+  &_info {
+    .zaui-slider-wrapper {
+      .zaui-slider-header {
+        text-align: center;
+        .zaui-slider-label {
+          color: var(--blue);
+        }
+      }
+      .zaui-slider-content {
+        .zaui-slider-handler {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .zaui-slider-track {
+            width: 100px;
+            height: 8px;
+            background-color: #e9f5f5;
+          }
+          .zaui-slider-thumb {
+            display: none;
+          }
+          .zaui-slider-track-bar {
+            background-color: var(--orange);
+          }
+        }
+      }
+    }
+    &_header {
+      margin-top: 10px;
+      position: relative;
+
+      &_back {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        .zaui-icon {
+          cursor: pointer;
+          color: var(--blue);
+        }
+      }
+    }
+
+    &_heading {
+      padding: 30px 30px 40px;
+      span {
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--blue);
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      p {
+        text-align: center;
+        margin-top: 12px;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &_intro {
+    &_heading {
+      padding: 40px 50px 50px;
+      span {
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--blue);
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      p {
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0 8px;
+        margin-top: 12px;
+        color: #afafaf;
+        font-weight: 500;
+      }
+    }
+
+    &_banner {
+      img {
+        object-fit: cover;
+      }
+    }
+    &_button {
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .zaui-btn {
+        background-color: rgb(36, 146, 132);
+        border-radius: 2px;
+        padding: 6px 32px !important;
+        width: 50vw;
+
+        font-size: 16px;
+      }
+    }
+  }
+
+  &_origin {
+    position: relative;
+    height: 100vh;
+    overflow-y: scroll !important;
+    transition: height 0.5s ease !important;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &_banner {
+      margin: 0 40px;
+      img {
+        object-fit: cover;
+      }
+    }
+
+    &_choose {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin: 30px 20px 40px;
+      &_item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #f7f2f9;
+        padding: 16px 12px;
+        border: 1px solid #e8e8e8;
+        border-radius: 12px;
+
+        &-active {
+          background-color: var(--blue);
+          color: white;
+        }
+      }
+    }
+
+    &_button {
+      margin-top: 50px;
+      bottom: 30px;
+      position: absolute;
+      left: 30%;
+
+      .zaui-btn {
+        background-color: rgb(36, 146, 132);
+        border-radius: 2px;
+        padding: 6px 32px !important;
+        width: 40vw;
+
+        font-size: 16px;
+      }
+    }
+  }
+
+  &_info {
+    position: relative;
+
+    &_banner {
+      margin: 0 40px;
+      img {
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+
+    &_form {
+      padding: 0 30px 80px;
+
+      .zaui-input {
+        height: 36px;
+      }
+    }
+
+    &_button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      bottom: 30px;
+      width: 100vw;
+      position: fixed;
+
+      .zaui-btn {
+        background-color: var(--blue);
+        border-radius: 2px;
+        padding: 6px 32px !important;
+        height: 36px;
+        font-size: 16px;
+
+        &:first-child {
+          background-color: var(--orange);
+        }
+      }
+    }
+  }
+
+  &_gender {
+    position: relative;
+    &_choose {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      gap: 20px;
+
+      &_item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        filter: blur(1px);
+        opacity: 0.8;
+        transition: all 0.3s ease;
+
+        cursor: pointer;
+        span {
+          margin-top: 10px;
+        }
+
+        img {
+          width: 150px;
+        }
+
+        &-active {
+          filter: none;
+          opacity: 1;
+          transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+      }
+    }
+    &_button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      bottom: 30px;
+      width: 100vw;
+      position: fixed;
+
+      .zaui-btn {
+        background-color: var(--blue);
+        border-radius: 2px;
+        padding: 6px 32px !important;
+        height: 36px;
+        font-size: 16px;
+
+        &:first-child {
+          background-color: var(--orange);
+        }
+      }
+    }
+  }
+
+  &_birthday {
+    &_banner {
+      margin: 0 40px;
+    }
+
+    &_text {
+      margin: 0 20px;
+
+      span,
+      p {
+        color: var(--blue);
+      }
+
+      strong {
+        color: var(--orange);
+      }
+    }
+    position: relative;
+    &_picker {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 20px;
+      &_wrapper {
+        background-color: #e5eff1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+
+      &_item {
+        padding: 8px 30px;
+        transition: background-color 0.4s linear;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &-active {
+          background-color: var(--blue);
+          transition: background-color 0.4s linear;
+          color: var(--white);
+        }
+      }
+    }
+
+    &_picker_component{
+        .year-picker_wrapper{
+            
+        }
+
+         .day-picker_wrapper,
+         .month-picker_wrapper{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            width: 100vw;
+            padding: 0 20px;
+            gap: 4px;
+
+            &_item {
+              padding: 8px 12px;
+              text-align: center;
+              border-radius: 8px;
+               span{
+                font-size: 18px;
+               }
+
+              &-active{
+                background-color: var(--blue);
+                color: var(--white);
+              }
+            }
+        }
+    }
+
+    &_button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      bottom: 30px;
+      width: 100vw;
+      position: fixed;
+
+      .zaui-btn {
+        background-color: var(--blue);
+        border-radius: 2px;
+        padding: 6px 32px !important;
+        height: 36px;
+        font-size: 16px;
+
+        &:first-child {
+          background-color: var(--orange);
+        }
+      }
+    }
+  }
+
+  &_address{
+    position: relative;
+    &_banner{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      img{
+        width: 50vw;
+      }
+    }
+
+    &_button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      bottom: 30px;
+      width: 100vw;
+      position: fixed;
+
+      .zaui-btn {
+        background-color: var(--blue);
+        border-radius: 2px;
+        padding: 6px 32px !important;
+        height: 36px;
+        font-size: 16px;
+
+        &:first-child {
+          background-color: var(--orange);
+        }
+      }
+    }
+
+    &_content{
+      padding: 10px 20px 0;
+
+      .zaui-input-affix-wrapper input{
+        height: 40px;
+      }
+    }
+  }
+}

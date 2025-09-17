@@ -1,0 +1,55 @@
+.a-collapse {
+  animation: all 0.5s ease-in-out;
+  &-child {
+    border-radius: 8px;
+    box-shadow:
+        1px 1px 1px 1px #eeeeee,
+      -1px -1px 1px 1px #eeeeee;
+    margin: 8px 0;
+          outline: 1px solid #dbdbdb;
+
+  }
+
+  &-parent {
+    .a-collapse_content {
+      padding: 4px 8px !important;
+    }
+
+    .a-collapse_header {
+      outline: 1px solid #dbdbdb;
+      background-color:rgba(190, 237, 255, 0.85);
+    }
+  }
+
+  &-open {
+    animation: show-collapse 0.5s ease-in-out;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+
+    .a-collapse_header {
+      border: unset;
+    }
+  }
+  
+  &-style{
+    .a-collapse_header {
+      background-color:	#c9f1fd;
+    }
+  }
+
+  &-abnormal{
+    .a-collapse_content {
+      padding: 4px 8px !important;
+      min-height: 80px;
+    }
+
+    .a-collapse_header {
+      outline: 1px solid #dbdbdb;
+      background-color:rgba(255, 241, 238, 0.85);
+
+      & > div > span{
+        font-weight: 600;
+      }
+    }
+  }
+}

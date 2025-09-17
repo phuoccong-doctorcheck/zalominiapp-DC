@@ -1,0 +1,11 @@
+.delayed-component {
+    transform: translateY(-100px);
+    transition: transform .3s linear;
+    visibility:hidden;
+}
+
+.delayed-component-visible {
+    transform: translateY(0);
+    transition: transform .3s linear;
+    visibility: visible;
+}

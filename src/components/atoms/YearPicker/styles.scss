@@ -1,0 +1,23 @@
+.year-picker .years{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 50px;
+                overflow-x: scroll;
+
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+
+                .year{
+                    font-size: 16px;
+                    transition: transform .4s ease-in;
+                    padding: 4px 10px;
+
+                    &:nth-child(2){
+                        transform: scale(1.4);
+                        font-size: 20px;
+                        transition: transform .4s ease-in;
+                    }
+                }
+            }

@@ -1,0 +1,341 @@
+/* ------- */
+.p-register {
+  &_form {
+    .zaui-input-helper-text {
+      color: #f00 !important;
+    }
+    .form-datepicker-error .zaui-input-group-addon .zaui-input-label,
+    .form-select-error .zaui-input-group-addon .zaui-input-label,
+    .form-input-error .zaui-input-group-addon .zaui-input-label {
+      color: #f00;
+    }
+
+    .form-input-error .zaui-input-affix-wrapper,
+    .form-input-error .zaui-input-textarea-affix-wrapper,
+    .form-select-error .zaui-input-affix-wrapper,
+    .form-datepicker-error .zaui-input-affix-wrapper {
+      border: 1px solid #f00 !important;
+      outline: none;
+    }
+    .zaui-input {
+      height: 36px;
+    }
+    .zaui-input-textarea {
+      min-height: 70px;
+    }
+  }
+}
+
+.zaui-bottom-navigation {
+  height: 70px;
+
+  .zaui-bottom-navigation-content {
+    padding-bottom: 10px;
+    height: 70px !important;
+  }
+}
+
+.detail-exam-wrapper {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.p-notify {
+  &_wrapper {
+    padding: 8px;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+  }
+
+  &_item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 6px;
+    border-radius: 12px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    padding: 4px;
+    &_icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      p {
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        background-color: rgb(253, 44, 44);
+        bottom: 5px;
+        border-radius: 50%;
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      span {
+        width: fit-content;
+        height: fit-content;
+        background-color: #ebcf00;
+        padding: 4px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-appointment {
+        span {
+          background-color: #45b8cc;
+        }
+      }
+    }
+
+    &_title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+
+      .zaui-text-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--blue);
+      }
+
+      &_date {
+        min-width: 85px;
+        height: fit-content;
+        font-style: italic;
+        font-size: 14px;
+      }
+    }
+    &_desc {
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 14px;
+    }
+
+    &_seen {
+      background-color: #dbdbdb;
+    }
+  }
+}
+
+.p-affiliate_code {
+  position: relative;
+
+  &_footer {
+    position: fixed;
+    bottom: 0;
+    background-color: var(--white);
+    box-shadow: 1px 0px 1px 1px rgba(0, 0, 0, 0.2);
+    height: 80px;
+    width: 100vw;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding-top: 6px;
+
+    & > * {
+      box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+      background-color: #e7e7e7;
+      height: 40px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &_content {
+    height: calc(100vh - 195px);
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .a-rich_editor {
+      .ql-editor {
+        p {
+          margin: 4px 0 !important;
+          font-size: 16px;
+          &:first-child {
+            font-size: 24px !important;
+            margin-bottom: 6px;
+          }
+        }
+
+        ul {
+          margin: 4px 0 !important;
+          padding-left: 10px;
+          li {
+            padding-left: 10px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.p-support {
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+
+    &::after {
+      display: none;
+    }
+    .zaui-header-back {
+      position: absolute;
+      left: 0;
+      width: 40px;
+      height: 40px;
+
+      .zaui-btn:active {
+        background-color: transparent;
+      }
+    }
+
+    span {
+      color: var(--white);
+    }
+
+    .zaui-header-title {
+      max-width: 180px;
+      text-align: center;
+    }
+  }
+
+  &_banner {
+    background-color: var(--blue);
+    height: 220px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    img {
+      width: 50vw;
+      object-fit: cover;
+      transform: translateY(-2px);
+    }
+
+    span {
+      position: absolute;
+      top: 5px;
+      color: var(--white);
+      font-size: 18px;
+    }
+  }
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.refresh-view {
+  height: 50vh;
+}
+
+.p-result_profile {
+  margin-bottom: 8px;
+  display: grid;
+  grid-template-columns: 1fr 45px;
+  gap: 6px;
+  &_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    overflow: auto scroll;
+    padding: 8px 16px 8px 8px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &_add_profile,
+  &_item {
+    padding: 4px;
+    border-radius: 12px;
+    height: 50px;
+    min-width: 52vw;
+    background-color: #eaeaea;
+    width: max-content;
+    position: relative;
+
+    &_delete {
+      position: absolute;
+      top: -8px;
+      right: -6px;
+      background-color: transparent;
+      cursor: pointer;
+          z-index: 100;
+    }
+
+    span {
+      color: var(--blue);
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &-active {
+      background: rgb(2, 0, 36);
+      background: linear-gradient(
+        95deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(89, 201, 104, 1) 0%,
+        rgba(89, 201, 157, 1) 100%
+      );
+      span,
+      p {
+        color: var(--white);
+      }
+    }
+  }
+
+  &_add_profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 45px;
+    cursor: pointer;
+
+    .zaui-icon {
+      color: var(--white);
+    }
+  }
+  &_add_profile {
+    background-color: rgb(31, 139, 255);
+  }
+  &_delete_profile {
+    background-color: #ededed;
+    .zaui-icon {
+      color: var(--black);
+    }
+    &-actives {
+      background-color: rgb(255, 99, 99);
+      .zaui-icon {
+        color: var(--white);
+      }
+    }
+  }
+}
+
+.zaui-sheet-content-header {
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 12px;
+
+  .zaui-sheet-content-title {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}

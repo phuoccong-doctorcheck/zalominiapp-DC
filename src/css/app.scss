@@ -1,0 +1,387 @@
+@import "./tailwind.css";
+@mixin font-face($font-name, $font-path, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: #{$font-name};
+    src: url("#{$font-path}") format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@include font-face('externalFont', '../static/fonts/UTM_Neo_Sans_Intel/UTM_Avo.ttf');
+@include font-face('externalFont', '../static/fonts/UTM_Neo_Sans_Intel/UTM_AvoItalic.ttf', normal, italic);
+@include font-face('externalFont', '../static/fonts/UTM_Neo_Sans_Intel/UTM_AvoBold_Italic.ttf', bold, italic);
+@include font-face('externalFont', '../static/fonts/UTM_Neo_Sans_Intel/UTM_AvoBold.ttf', bold, normal);
+
+
+/* Your app custom styles here */
+:root {
+  --blue-main: #0068ff;
+  --orange: #ff8a00;
+  --bg-color: #f4f5f6;
+  --blue: #04566e;
+  --white: #fff;
+  --black: #000;
+  --green-color: #2db52a;
+  --red: #f00;
+  --pastel-blue: #b3ccd3;
+}
+body {
+  background-color: var(--white);
+  font-family: externalFont !important;
+}
+hr {
+  width: 100%;
+  background-color: #e4eeef;
+  height: 0.5px;
+  border: none;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .zaui-routes {
+    flex: 1;
+    .zaui-routes-item {
+      display: flex;
+      .zaui-page {
+        min-height: 0;
+        flex: 1;
+        height: 100vh;
+        overflow: auto scroll;
+        transition: height .5s ease;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+#bottom-nav {
+  background-color: #fff;
+  height: 75px !important;
+  transition: all 0.5s linear;
+
+  .zaui-bottom-navigation-content {
+    height: 75px !important;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    transition: grid-template-columns 0.5s linear;
+    margin-bottom: 5px;
+
+    .zaui-bottom-navigation-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-7px);
+
+      .zaui-bottom-navigation-item-icon {
+        color: var(--blue);
+      }
+    }
+
+    .bottom-navigation_item-active {
+      color: var(--orange) !important;
+      
+      .zaui-bottom-navigation-item-label{
+        font-weight: 600;
+
+      }
+
+      .zaui-bottom-navigation-item-icon {
+        color: var(--orange) !important;
+        .zaui-icon{
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+.zaui-bottom-navigation-content::after {
+  top: 0;
+}
+.zaui-btn-primary,
+.zaui-btn-primary.zaui-btn-highlight {
+  background-color: var(--blue-main);
+}
+.zaui-btn-tertiary,
+.zaui-btn-tertiary.zaui-btn-highlight {
+  color: var(--blue-main);
+}
+.zaui-btn-secondary,
+.zaui-btn-secondary.zaui-btn-highlight {
+  background-color: white;
+  color: black;
+}
+
+.zaui-header {
+  background-color: var(--blue) !important;
+  .zaui-header-back .zaui-btn-icon,
+  .zaui-header-title {
+    color: var(--white) !important;
+  }
+}
+
+.zaui-page,
+.no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.zaui-tabs-tabbar {
+  overflow-x: auto;
+}
+.zaui-input-prefix {
+  .zaui-btn-icon-only .zaui-btn-icon {
+    width: 16px;
+    height: 16px;
+  }
+  + .zaui-input {
+    padding-left: 0;
+  }
+}
+.zaui-btn-prefix-icon.zaui-btn-small .zaui-icon {
+  vertical-align: unset;
+}
+.date-booker {
+  .swiper-slide-active > .bg-white {
+    background-color: var(--orange);
+    color: white;
+  }
+  &.fade-corner {
+    position: relative;
+    &:before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      z-index: 10;
+      opacity: 0.5;
+      background: linear-gradient(to right, var(--bg-color) 80%, transparent);
+      pointer-events: none;
+    }
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 80px;
+      z-index: 10;
+      opacity: 0.5;
+      background: linear-gradient(to left, var(--bg-color) 80%, transparent);
+      pointer-events: none;
+    }
+  }
+}
+.swiper-slide-active {
+  font-weight: 600;
+}
+.cart-preview {
+  &,
+  .zaui-mask,
+  .zaui-modal-wrapper {
+    z-index: 10;
+  }
+  &.collapsed {
+    .zaui-sheet-wrapper {
+      pointer-events: none;
+    }
+    .zaui-sheet-content {
+      pointer-events: initial;
+    }
+  }
+}
+.table-booker {
+  .zaui-picker-input {
+    border: none;
+  }
+}
+
+.result-category {
+  transition: all 0.3s linear;
+  border-radius: 16px;
+  background-color: #ececec;
+}
+.result-category_active {
+  color: #fff;
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+  transition: background-color 300ms, color 100ms;
+  border-radius: 16px;
+
+  &::after {
+    border-radius: 16px;
+    transition: background-color 0.3s, color 0.3s,
+      opacity 100ms linear box-shadow 200ms;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transition-delay: 0.5s;
+    background-color: #0068ff;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.a-rich_editor {
+  &-hide {
+    .quill {
+      .ql-toolbar.ql-snow {
+        display: none !important;
+      }
+      .ql-container {
+        border: unset !important;
+        .ql-editor {
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.zaui-image-viewer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+
+  .zaui-mask-enter-done {
+    width: 100vw !important;
+    height: 100%;
+  }
+
+  .zaui-btn > .zaui-btn-container {
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.c-profile {
+  &_item {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+  }
+}
+
+.c-symptoms_input {
+  padding: 4px !important;
+  margin-top: 0 !important;
+
+  .zaui-input-affix-wrapper {
+    border-radius: 4px;
+    border-color: var(--main-blue);
+  }
+}
+
+.zaui-snackbar {
+ $root: &;
+   min-height: 50px !important;
+  background-color: #23365b;
+  color: #fff !important;
+  width: 95vw !important;
+  padding: 4px !important;
+
+  .zaui-snackbar-success ~ #{$root} & {
+    background-color: #0068ff !important;
+  }
+
+  .zaui-snackbar-content {
+    width: fit-content !important;
+  }
+
+  .zaui-snackbar-action{
+    display: none;
+  }
+
+  .zaui-snackbar-prefix-icon {
+    height: fit-content;
+    width: fit-content;
+
+    img {
+      height: 60px;
+      width: 60px;
+      object-fit: cover;
+    }
+  }
+}
+
+
+
+.color_main {
+  color: var(--blue);
+}
+
+.wrapper-box-images{
+
+    width: 90vw;
+  overflow-x: scroll;
+  margin-top: 6px;
+
+  
+&::-webkit-scrollbar {
+  display: none;
+}
+
+  &>*{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    margin: 6px 0;
+    overflow-x:auto;
+    width:max-content;
+  }
+
+  img{
+    width: 150px;
+    max-width: unset;
+    object-fit: contain;
+  }
+}
+
+.o-info_vitalsigns{
+  &_header{
+    padding: 10px 8px;
+    
+    span{
+      text-align: center;
+      font-weight: 600;
+      font-size: 17px;
+      text-transform: uppercase;
+    }
+  }
+
+  &_content{
+    height: 415px;
+    overflow-y: scroll;
+    padding: 8px 8px 30px;
+    background-color: #F8F2F8;
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+}
+
+.zaui-modal-content-title{
+  font-weight: 600 !important;
+  color: #04566e;
+}
+.zaui-modal-content .zaui-modal-content-title {
+  font-size: 18px !important;
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="238.145" height="127.399" viewBox="0 0 238.145 127.399">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.841" y1="0.159" x2="-0.361" y2="1.361" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f7b536"/>
+      <stop offset="1" stop-color="#ec4e00"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="0.841" y1="0.159" x2="-0.361" y2="1.361" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-12" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Group_1251" data-name="Group 1251" transform="translate(-3557.92 735.542)">
+    <g id="Group_1249" data-name="Group 1249" transform="translate(328 -1267)">
+      <circle id="Ellipse_231" data-name="Ellipse 231" cx="3.955" cy="3.955" r="3.955" transform="translate(3431.427 577.255)" fill="url(#linear-gradient)"/>
+      <circle id="Ellipse_232" data-name="Ellipse 232" cx="3.955" cy="3.955" r="3.955" transform="translate(3263.227 577.255)" fill="url(#linear-gradient)"/>
+      <circle id="Ellipse_233" data-name="Ellipse 233" cx="7.702" cy="7.702" r="7.702" transform="translate(3412.276 533.539)" fill="url(#linear-gradient)"/>
+      <circle id="Ellipse_234" data-name="Ellipse 234" cx="1.874" cy="1.874" r="1.874" transform="translate(3456.824 558.52)" fill="url(#linear-gradient)"/>
+      <circle id="Ellipse_235" data-name="Ellipse 235" cx="1.874" cy="1.874" r="1.874" transform="translate(3241.161 531.458)" fill="url(#linear-gradient)"/>
+      <circle id="Ellipse_236" data-name="Ellipse 236" cx="1.041" cy="1.041" r="1.041" transform="translate(3448.914 640.955)" fill="url(#linear-gradient-6)"/>
+      <circle id="Ellipse_237" data-name="Ellipse 237" cx="1.041" cy="1.041" r="1.041" transform="translate(3259.896 656.775)" fill="url(#linear-gradient-6)"/>
+      <circle id="Ellipse_238" data-name="Ellipse 238" cx="1.041" cy="1.041" r="1.041" transform="translate(3229.92 608.064)" fill="url(#linear-gradient-6)"/>
+      <circle id="Ellipse_239" data-name="Ellipse 239" cx="2.29" cy="2.29" r="2.29" transform="translate(3423.101 615.142)" fill="url(#linear-gradient)"/>
+      <circle id="Ellipse_240" data-name="Ellipse 240" cx="1.874" cy="1.874" r="1.874" transform="translate(3464.318 593.492)" fill="url(#linear-gradient)"/>
+      <circle id="Ellipse_241" data-name="Ellipse 241" cx="1.874" cy="1.874" r="1.874" transform="translate(3261.145 625.55)" fill="url(#linear-gradient-6)"/>
+    </g>
+    <g id="Group_1250" data-name="Group 1250" transform="translate(328 -1267)">
+      <g id="Group_1132" data-name="Group 1132">
+        <path id="Path_76806" data-name="Path 76806" d="M3401.89,631.29,3355.741,550.2a11.875,11.875,0,0,0-10.681-6.065,12.024,12.024,0,0,0-10.68,6.065l-46.149,81.091a12.67,12.67,0,0,0,0,12.263,11.813,11.813,0,0,0,10.548,6.065h92.167a12.55,12.55,0,0,0,10.944-18.328Zm-50.1-.923h-12.263v-10.68h12.263Zm0-16.877h-12.263V582.9h12.263Z" fill="url(#linear-gradient-12)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+.p-authenticating {
+  height: 100vh;
+  background-color: #04566e !important;
+  &_content {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./imgBookingConfirm.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20% 20%;
+
+    .a-loading {
+      transform: translateY(-210px);
+    }
+  }
+}

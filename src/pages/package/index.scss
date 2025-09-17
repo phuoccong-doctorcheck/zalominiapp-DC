@@ -1,0 +1,129 @@
+.p-package_detail {
+  padding: 8px 0;
+  background-color: var(--white);
+  position: relative;
+
+  &_banner {
+    box-shadow: 0px 1px 5px 0px #83838380;
+  }
+
+  &_main {
+    margin-bottom: 45px;
+
+    &_list {
+      padding: 4px;
+    }
+
+    &_item {
+      margin: 8px 0;
+      background-color: transparent !important;
+
+      .a-collapse {
+        background-color: transparent !important;
+        overflow: hidden;
+
+        &_header {
+          background-color: var(--pastel-blue);
+        }
+
+        &-hide {
+          border-radius: 12px;
+        }
+
+        &-open {
+          border: unset !important;
+
+          .a-collapse {
+            transition: all 0.5s ease-in-out;
+
+            &_header {
+              border-radius: 12px !important;
+              margin-bottom: 8px;
+              box-shadow: unset;
+            }
+
+            &_content {
+              padding: 0 !important;
+              animation: show-collapse 0.5s ease-in-out forwards;
+              transition: animation 0.5s ease-in-out;
+            }
+          }
+        }
+      }
+
+      &_child {
+        box-shadow: 0px 1px 1px 0px #83838380;
+        padding: 8px 12px;
+        border-radius: 12px;
+        border: 1px solid #dbdbdb;
+        margin: 8px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+      }
+    }
+  }
+
+  &_button {
+    padding: 12px 16px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+
+    button {
+      padding: 8px 24px;
+      background-color: #40d6a4;
+      width: 50%;
+      box-shadow: 0px 1px 5px 0px #83838380;
+      border-radius: 8px;
+      color: var(--white);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* ------------ */
+
+.p-package {
+  padding: 8px;
+  background-color: var(--white);
+
+  &_banner {
+    background-color: #cdc8cc58;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+
+    &_heading {
+      position: absolute;
+      z-index: 10;
+      top: 20%;
+      left: 2%;
+    }
+  }
+
+  &_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 12px;
+
+    &_item {
+      box-shadow: 0px 1px 5px 0px #83838380;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  }
+}
+
+@keyframes show-collapse {
+  from {
+    height: 0%;
+  }
+
+  to {
+    height: 100%;
+  }
+}

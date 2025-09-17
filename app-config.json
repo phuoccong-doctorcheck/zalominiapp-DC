@@ -1,0 +1,58 @@
+{
+  "app": {
+    "title": "Doctor Check Member",
+    "headerColor": "",
+    "textColor": {
+      "light": "white",
+      "dark": "black"
+    },
+    "statusBarColor": "#04566e",
+    "leftButton": "back",
+    "textAlign": "left",
+    "actionBarHidden": true,
+    "hideAndroidBottomNavigationBar": true,
+    "hideIOSSafeAreaBottom": true,
+    "selfControlLoading": false,
+    "statusBar": "normal"
+  },
+  "template": {
+    "primaryColor": "#04566e",
+    "secondaryColor": "",
+    "serviceFee": 25000,
+    "searchBar": false
+  },
+  "debug": false,
+  "listCSS": [],
+  "listSyncJS": [],
+  "listAsyncJS": [],
+  "pages": [
+    "/",
+    "/permission",
+    "/dashboard",
+    "/404",
+    "/result",
+    "/booking",
+    "/survey",
+    "/package/:type",
+    "/time-picker",
+    "/profile-picker",
+    "/introduce",
+    "/follow-booking",
+    "/infos",
+    "/relatives",
+    "/support",
+    "/incentives",
+    "/redemption",
+    "/detail-booking",
+    "/detail-redemption",
+    "/package-detail/:id",
+    "/detail-exam",
+    "/detail-bill",
+    "/abnormal_result",
+    "/prescription-detail/:id",
+    "/symptoms-picker",
+    "/notification",
+    "/switch-profile",
+    "/detail-booking"
+  ]
+}

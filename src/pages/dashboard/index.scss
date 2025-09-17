@@ -1,0 +1,109 @@
+.p-dashboard {
+  position: relative;
+  background-color: var(--white);
+  padding-bottom: 20px;
+
+  &_header {
+    position: fixed !important;
+    padding: 8px;
+    width: 100%;
+    background-color: var(--blue);
+    z-index: 100;
+    border: unset !important;
+    outline: unset !important;
+
+    &::after{
+      display: none;
+    }
+    
+    .zaui-btn {
+      height: 20px;
+      width: 100px;
+      border-radius: 4px;
+      font-weight: 400;
+      background-color: #ebcf00;
+    }
+
+    &_notify {
+      width: fit-content;
+      height: fit-content;
+      position: relative;
+
+      i {
+        position: absolute;
+        bottom: 0px;
+        right: -1px;
+        z-index: 100;
+        background-color: var(--white);
+        border-radius: 50%;
+        padding: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &_slider {
+    margin-top: 60px;
+    position: relative;
+    z-index: 0;
+    background-color: var(--blue);
+    
+    img {
+      object-fit: cover;
+      position: relative;
+      z-index: 200;
+      transform: translateY(15px);
+    }
+  }
+
+  &_popular {
+    position: relative;
+    z-index: 10;
+  }
+
+  &_survey{
+    position: relative;
+    &_wrapper{
+      background-color: var(--blue);
+      padding: 4px;
+      border: 1px solid var(--blue);
+      border-radius: 20px;
+      margin: 0 4px;
+      display: grid;
+      grid-template-columns: 1fr 110px;
+      transform: translateY(7px);
+      position: relative;
+      z-index: 10;
+
+      &_text{
+        text-align: center;
+        color: #fff;
+        padding-top: 4px;
+
+        .zaui-text{
+          font-weight: 600;
+          font-size: 17px;
+          text-transform: capitalize;
+        }
+
+        p{
+          font-size: 14px;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+      }
+      &_icon{
+        display: flex;
+        width: 90px;
+        
+        img{
+          height: 90px;
+          object-fit: cover;
+          transform: scale(1.55) translateY(-13px) translateX(6px);
+        }
+      }
+    }
+  }
+}

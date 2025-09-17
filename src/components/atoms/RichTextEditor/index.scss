@@ -1,0 +1,14 @@
+.a-rich_editor {
+  .quill {
+    .ql-toolbar.ql-snow {
+      display: none !important;
+    }
+
+    .ql-container {
+      border: unset !important;
+      .ql-editor {
+        padding: 0 !important;
+      }
+    }
+  }
+}

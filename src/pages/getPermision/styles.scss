@@ -1,0 +1,86 @@
+.p-get_permission {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &_heading {
+    margin-bottom: 12px;
+    width: 100vw;
+    span {
+      text-align: center;
+      font-weight: 600;
+      color: var(--blue);
+      font-size: 18px;
+      text-transform: capitalize;
+    }
+  }
+
+  &_banner {
+    margin: 0 20px;
+    height: 33vh;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &_desc{
+    padding: 0 16px;
+    margin-top: 12px;
+    p{
+      text-align: start;
+      font-size: 16px;
+      color: var(--black);
+    }
+  }
+
+  &_content {
+    margin: 12px 16px 0;
+    &_item {
+      border-bottom: 1px solid #dbdbdb;
+      padding: 4px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+        gap: 4px;
+
+      &:last-child {
+        border-bottom: unset;
+      }
+      .zaui-box{
+        padding: 6px;
+
+        span{
+            font-weight: 600;
+                  color: var(--blue);
+            font-size: 16px;
+        }
+
+        p{
+            font-size: 16px;
+            font-weight: 400;
+        }
+      }
+    }
+  }
+
+  &_button{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    .zaui-btn{
+        border-radius: 8px;
+        padding: 8px 24px !important;
+        background-color: rgb(1, 75, 195);
+        font-size: 16px;
+        font-weight: 600;
+    }
+  }
+}
