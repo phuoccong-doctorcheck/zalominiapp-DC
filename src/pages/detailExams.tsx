@@ -549,7 +549,7 @@ function MedicalExamPage() {
                         master_id: state.masterId,
                         service_group_type: data,
                         id: !!item.items?.length ? item.items[0].id : "",
-                        customer: stateProfileCustomer,
+                        customer_id: stateProfileCustomer?.customer_id,
                       };
                       // if else ở dưới trạng thái đóng mở ( nếu đang mở cate mà bấm thêm lần nữa thì collapseActive.parent === data) thì xóa data )
                       if (collapseActive.parent === data) {
@@ -566,7 +566,7 @@ function MedicalExamPage() {
                         master_id: state.masterId,
                         service_group_type: type,
                         id: data,
-                        customer: stateProfileCustomer,
+                        customer_id: stateProfileCustomer?.customer_id,
                       };
                       if (collapseActive.children === data) {
                         setCollapseActive({ ...collapseActive, children: "" });

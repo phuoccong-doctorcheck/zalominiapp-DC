@@ -199,7 +199,7 @@ const PackageDetailPage = () => {
           }
           }}
         >
-          Chọns
+          Chọn
         </button>
       </Box>
     </Page>

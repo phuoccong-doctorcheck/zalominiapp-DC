@@ -115,6 +115,7 @@ export interface ResponseHistoriesCustomer {
 }
 
 export interface HistoriesCustomerItem {
+  datetime: Date;
   customer_id: string;
   master_id: string;
   status: string;

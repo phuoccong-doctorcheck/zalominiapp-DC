@@ -32,7 +32,7 @@ const CustomerInformation: React.FC = () => {
 
     const menu = [
         { id: 1, isEdit: false, title: dataProfile?.gender, icon: 'zi-user-window-solid' },
-        { id: 2, isEdit: false, title: dataProfile?.username, icon: 'zi-call' },
+        // { id: 2, isEdit: false, title: dataProfile?.username, icon: 'zi-call' },
         { id: 3, isEdit: false, title: `${dataProfile?.age} Tuổi`, icon: 'zi-at' },
     ]
 

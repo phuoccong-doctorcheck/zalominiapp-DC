@@ -193,10 +193,13 @@ const ListCategoriesResult: FunctionComponent<RestaurantProps> = ({
                     childActive === child.id ? "zi-pin-solid" : "zi-pin"
                   }
                   onClick={() => {
+                     if(child.status.status === "done" || child.status.status === "new") {
+                      console.log(child.status)
                     if (onClickCollapseChild) {
                       onClickCollapseChild(child.id, child.service_group_type);
                     }
                     setTypeResult(child.service_group_type as ResultType);
+                   }
                   }}
                   textStatus={child.status}
                 >

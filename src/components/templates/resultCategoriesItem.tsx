@@ -82,7 +82,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
                 Thực hiện:
               </p>
               <span className="text-[14px]">
-                {formatDate(data?.imaging?.checkin_time)}
+                {formatDate(data?.imaging?.create_date)}
               </span>
             </Box>
             <Box flex justifyContent="space-between" className="">
@@ -90,7 +90,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
                 Trả kết quả:
               </p>
               <span className="text-[14px]">
-                {formatDate(data?.imaging?.checkout_time)}
+                {formatDate(data?.imaging?.approved_date)}
               </span>
             </Box>
             <Box flex justifyContent="space-between" className="">
@@ -196,7 +196,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
         return (
           <Box className="t-result_item_ns">
             {renderHeader(
-              moment(data?.imaging?.checkin_time).format("HH:mm - DD/MM/YYYY"),
+              moment(data?.imaging?.create_date).format("HH:mm - DD/MM/YYYY"),
               moment(data?.imaging?.approved_date).format("HH:mm - DD/MM/YYYY"),
               data?.imaging?.signature_print_name,
               `${data?.imaging?.execution_department?.name} DOCTOR CHECK`,
@@ -309,7 +309,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
         return (
           <Box className="t-result_item_xq">
             {renderHeader(
-              moment(data?.imaging?.checkin_time).format("HH:mm DD/MM/YYYY"),
+              moment(data?.imaging?.create_date).format("HH:mm DD/MM/YYYY"),
               moment(data?.imaging?.approved_date).format("HH:mm DD/MM/YYYY"),
               data?.imaging?.signature_print_name,
               `${data?.imaging?.execution_department?.name} DOCTOR CHECK`,
@@ -384,7 +384,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
                 Thực hiện:
               </p>
               <span className="text-[14px]">
-                {formatDate(data?.imaging?.checkin_time)}
+                {formatDate(data?.imaging?.create_date)}
               </span>
             </Box>
             <Box flex justifyContent="space-between" className="">
@@ -392,7 +392,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
                 Trả kết quả:
               </p>
               <span className="text-[14px]">
-                {formatDate(data?.imaging?.checkout_time)}
+                {formatDate(data?.imaging?.approved_date)}
               </span>
             </Box>
             <Box flex justifyContent="space-between" className="">
@@ -479,7 +479,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
                 Thời gian đăng kí:
               </p>
               <span>
-                {moment(data?.data?.servicepoint_datetime).format(
+                {moment(data?.servicepoint_datetime).format(
                   "HH:mm DD/MM/YYYY",
                 )}
               </span>
@@ -540,14 +540,14 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
                   ))}
                 </tbody>
               </table>
-              <Box className="pt-1 border-t mt-2 flex justify-between pf-1 pr-2">
+              {/* <Box className="pt-1 border-t mt-2 flex justify-between pf-1 pr-2">
                 <Text className="font-bold color_main">Tổng tiền:</Text>
                 <span className="font-bold text-[red]">
                   {data?.total_services
                     ? `${formatNumber(data?.total_services)} đ`
                     : ""}
                 </span>
-              </Box>
+              </Box> */}
             </Box>
           </Box>
         );
@@ -649,7 +649,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
       case "XN":
         return (
           <Box className="t-result_item_xn">
-            <Box flex justifyContent="space-between" className="w-[90vw]">
+            <Box flex justifyContent="space-between" >
               <p className="text-[14px] min-w-[110px] font-[400] color_main ">
                 Ngày lấy mẫu:
               </p>
@@ -657,7 +657,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
                 {formatDate(data.get_samples_time)}
               </span>
             </Box>
-            <Box flex justifyContent="space-between" className="w-[90vw]">
+            <Box flex justifyContent="space-between" >
               <p className="text-[14px] min-w-[110px] font-[400] color_main ">
                 Ngày thực hiện:
               </p>
@@ -665,7 +665,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
                 {formatDate(data.approved_time)}
               </span>
             </Box>
-            <Box flex justifyContent="space-between" className="w-[90vw]">
+            <Box flex justifyContent="space-between" >
               <p className="text-[14px] min-w-[110px] font-[400] color_main ">
                 Trả kết quả:
               </p>
@@ -673,7 +673,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
                 {formatDate(data.expected_results_time)}
               </span>
             </Box>
-            <Box flex justifyContent="space-between" className="w-[90vw]">
+            <Box flex justifyContent="space-between" >
               <p className="text-[14px] min-w-[110px] font-[400] color_main ">
                 Người thực hiện:
               </p>
@@ -681,7 +681,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
                 {data?.approved_employee?.name}
               </span>
             </Box>
-            <Box flex justifyContent="space-between" className="w-[90vw]">
+            <Box flex justifyContent="space-between" >
               <p className="text-[14px] min-w-[110px] font-[400] color_main ">
                 Nơi thực hiện:
               </p>
@@ -690,7 +690,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
               </span>
             </Box>
             {data?.diagnose_note &&
-              <Box className="w-[90vw] mt-2 mx-2 shadow-sm border p-2 rounded-md translate-x-[-5px]">
+              <Box className="w-[99%] mt-2 mx-2 shadow-sm border p-2 rounded-md translate-x-[-5px]">
                 <p className="min-w-[70px] font-[600] color_main">
                   Kết luận:
                 </p>
@@ -742,7 +742,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
                 Nơi nhận mẫu:
               </p>
               <span className="text-[14px]">
-                {data.histopathology?.servicepoint_department?.name}
+                {data.histopathology?.execution_department?.name}
               </span>
             </Box>
             <Box flex justifyContent="space-between" className="">
@@ -776,7 +776,10 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
               <p className="text-[14px] min-w-[100px] font-[400] color_main">
                 Ngày trả kết quả:
               </p>
-              <span className="text-[14px]">07:29 - 11/12/2023</span>
+              <span className="text-[14px]"> {data.histopathology?.expected_results_time &&
+                  moment(data.histopathology?.expected_results_time).format(
+                    "HH:mm - DD/MM/YYYY",
+                  )}</span>
             </Box>
             <Box className="">
               <p className="min-w-[100px] font-[400] color_main">
@@ -791,7 +794,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
                 Yêu cầu xét nghiệm:
               </p>
               <span className="text-[14px]">
-                {data?.histopathology?.diagnose_note}
+                {data?.histopathology?.request_text}
               </span>
               <Box className="mt-2">
                 <p className="min-w-[100px] font-[400] color_main">
@@ -807,7 +810,7 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
                 Kết luận:
               </p>
               <span className="text-[14px]">
-                {data?.histopathology?.diagnose_note}
+                {data?.histopathology?.result_conclusion}
               </span>
               <Box className="mt-2">
                 <p className="min-w-[100px] font-[400] color_main">
@@ -838,25 +841,25 @@ const ResultCategoriesItem: FunctionComponent<RestaurantProps> = ({
               <p className="text-[14px] min-w-[100px] font-[400] color_main">
                 Ngày nhận chỉ định:
               </p>
-              <span className="text-[14px]">07:29 - 11/12/2023</span>
+              <span className="text-[14px]"> {data?.molecule?.handing_datetime ? moment(data?.molecule?.handing_datetime).format("HH:mm - DD/MM/YYYY") : 'N/A'}</span>
             </Box>
             <Box flex justifyContent="space-between" className="">
               <p className="text-[14px] min-w-[100px] font-[400] color_main">
                 Người nhận:
               </p>
-              <span className="text-[14px]">KTVXN. Trần Uyên Anh</span>
+              <span className="text-[14px]">  {data?.molecule?.handing_employee ?data?.molecule?.handing_employee?.name : 'N/A'}</span>
             </Box>
             <Box flex justifyContent="space-between" className="">
               <p className="text-[14px] min-w-[100px] font-[400] color_main">
                 Ngày duyệt kết quả::
               </p>
-              <span className="text-[14px]">07:29 - 11/12/2023</span>
+              <span className="text-[14px]">  {data?.molecule?.approved_datetime ? moment(data?.molecule?.approved_datetime).format("HH:mm - DD/MM/YYYY") : 'N/A'}</span>
             </Box>
             <Box flex justifyContent="space-between" className="">
               <p className="text-[14px] min-w-[100px] font-[400] color_main">
                 Người duyệt:
               </p>
-              <span className="text-[14px]">KTVXN. Trần Uyên Anh</span>
+              <span className="text-[14px]">  {data?.molecule?.approved_employee ?data?.molecule?.approved_employee?.name : 'N/A'}</span>
             </Box>
             <Box className="">
               <p className="min-w-[100px] font-[400] color_main">

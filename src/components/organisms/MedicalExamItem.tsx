@@ -34,7 +34,7 @@ const MedicalExamItem: FunctionComponent<RestaurantProps> = ({ exam, onClick }) 
       </span>
     </Box>
     <Text className="text-[14px] font-[500] text-[#0068ff]">{`Thời gian đến khám: ${moment(
-      exam.register_date,
+      exam.datetime,
     ).format("HH:mm DD/MM/YYYY")}`}</Text>
   </div>
 );

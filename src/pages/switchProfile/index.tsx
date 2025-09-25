@@ -222,7 +222,7 @@ function SwitchProfile() {
           },
           icon: false,
           text: data?.message,
-          type: "error",
+          type: "success",
         });
       },
       onError: (error) => {
@@ -696,10 +696,10 @@ function SwitchProfile() {
               color: linkProfileError.customerId?.trim() && "red",
             }}
           >
-            Mã hồ sơ <span className="text-red">*</span>
+            CCCD/Mã hồ sơ <span className="text-red">*</span>
           </Text>
           <Input
-            placeholder="DC202400..."
+            placeholder="Điền CCCD hoặc mã hồ sơ"
             className={mapModifiers(
               "form-input",
               linkProfileError.customerId?.trim() && "error"
